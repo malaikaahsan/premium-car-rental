@@ -37,7 +37,8 @@ export default function BookingForm({
     return diff > 0 ? diff : 0;
   }, [bookingData.pickupDate, bookingData.returnDate]);
 
-  const totalPrice = totalDays * car.pricePerDay;
+  const safeCar = car || {};
+  const totalPrice = totalDays * (safeCar.pricePerDay || 0);
 
   function generateReference() {
     return `PCR-${new Date().getFullYear()}-${Math.floor(
@@ -48,15 +49,15 @@ export default function BookingForm({
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!car?.available) {
+    if (!safeCar?.available) {
       return;
     }
 
     const reference = generateReference();
     const updatedBookingData = {
       ...bookingData,
-      carId: car.id,
-      carName: car.name,
+      carId: safeCar.id,
+      carName: safeCar.name,
       totalDays,
       totalPrice,
       reference,
@@ -82,7 +83,7 @@ export default function BookingForm({
   const input =
     "w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-[#D4AF37] focus:ring-4 focus:ring-[#D4AF37]/20";
 
-  if (!car?.available) {
+  if (!safeCar?.available) {
     return (
       <div className="rounded-3xl border border-red-200 bg-red-50 p-8 shadow-xl">
         <h2 className="text-2xl font-bold text-[#111111]">

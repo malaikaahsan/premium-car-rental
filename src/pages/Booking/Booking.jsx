@@ -155,13 +155,13 @@ export default function Booking() {
               </div>
             )}
 
-            <div className="rounded-[28px] border border-gray-200 bg-white p-8 shadow-xl">
+            <div className="rounded-[28px] border border-[var(--border)] bg-[var(--surface)] p-8 shadow-xl">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
                     Confirmed Bookings
                   </p>
-                  <h3 className="mt-2 text-2xl font-bold text-[#111111]">
+                  <h3 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
                     Your Reservations
                   </h3>
                 </div>
@@ -179,7 +179,7 @@ export default function Booking() {
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <p className="font-semibold text-[#111111]">
+                          <p className="font-semibold text-[var(--text-primary)]">
                             {booking.carName || `Car #${booking.carId}`}
                           </p>
                           <p className="mt-1 text-sm text-[var(--text-secondary)]">
