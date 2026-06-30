@@ -211,59 +211,39 @@ http://localhost:5000/cars
 
 ![Home Page](screenshots/home.png)
 
-```
-screenshots/home.png
-```
-
 ---
 
 ## 🚘 Cars Page
 
-> Add screenshot here
-
-```
-screenshots/cars.png
-```
+![Cars Page](screenshots/cars.png)
 
 ---
 
 ## 🚗 Car Details
 
-> Add screenshot here
+![Car Details Page](screenshots/details.png)
 
-```
-screenshots/details.png
-```
 
 ---
 
 ## 📅 Booking Page
 
-> Add screenshot here
+![Booking Page](screenshots/booking.png)
 
-```
-screenshots/booking.png
-```
 
 ---
 
 ## ❤️ Wishlist
 
-> Add screenshot here
+![Wishlist Page](screenshots/wishlist.png)
 
-```
-screenshots/wishlist.png
-```
 
 ---
 
 ## 📞 Contact Page
 
-> Add screenshot here
+![Contact Page](screenshots/contact.png)
 
-```
-screenshots/contact.png
-```
 
 ---
 
