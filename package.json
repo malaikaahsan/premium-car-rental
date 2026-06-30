@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "dev": "vite",
-     "server": "json-server --watch src/data/db.json --port 5000",
+    "server": "json-server --watch src/data/db.json --port 5000",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
