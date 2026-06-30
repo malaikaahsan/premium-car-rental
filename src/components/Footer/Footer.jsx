@@ -17,9 +17,9 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           {/* Company */}
           <div>
-            <h2 className="text-3xl font-bold text-[#D4AF37]">Veloura Drive</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37]">Veloura Drive</h2>
 
-            <p className="mt-5 leading-7 text-gray-400">
+            <p className="mt-5 leading-7 text-gray-400 text-sm md:text-lg">
               Experience luxury, elegance, and comfort with our premium fleet of
               world-class vehicles. Whether it's business, weddings, or leisure,
               Veloura Drive delivers an unforgettable driving experience.
@@ -52,9 +52,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:text-center">
-            <h3 className="text-2xl font-semibold text-white">Quick Links</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-white">Quick Links</h3>
 
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-3 text-sm md:text-lg">
               <li>
                 <NavLink to="/" className={linkClass}>
                   Home
@@ -89,9 +89,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-2xl font-semibold text-white">Contact Us</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-white">Contact Us</h3>
 
-            <div className="space-y-5 mt-5">
+            <div className="space-y-5 mt-5 text-sm md:text-lg">
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-[#D4AF37] text-lg" />
                 <span>Blue Area, Islamabad, Pakistan</span>
@@ -114,7 +114,7 @@ export default function Footer() {
       {/* Bottom Footer */}
 
       <div className="border-t border-[#222222]">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <div className="text-xs md:text-lg max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>
             © {new Date().getFullYear()} Veloura Drive. All Rights Reserved.
           </p>
