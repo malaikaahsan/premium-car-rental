@@ -1,25 +1,24 @@
 import { motion } from "framer-motion";
-import {
-  FaLinkedinIn,
-  FaTwitter,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const team = [
   {
     name: "John Smith",
     role: "Chief Executive Officer",
-    image: "https://ui-avatars.com/api/?name=John+Smith&background=111111&color=D4AF37&size=300",
+    image:
+      "https://ui-avatars.com/api/?name=John+Smith&background=111111&color=D4AF37&size=300",
   },
   {
     name: "Emma Watson",
     role: "Operations Manager",
-    image: "https://ui-avatars.com/api/?name=Emma+Watson&background=111111&color=D4AF37&size=300",
+    image:
+      "https://ui-avatars.com/api/?name=Emma+Watson&background=111111&color=D4AF37&size=300",
   },
   {
     name: "David Lee",
     role: "Customer Relations",
-    image: "https://ui-avatars.com/api/?name=David+Lee&background=111111&color=D4AF37&size=300",
+    image:
+      "https://ui-avatars.com/api/?name=David+Lee&background=111111&color=D4AF37&size=300",
   },
 ];
 
@@ -27,11 +26,7 @@ export default function Team() {
   return (
     <section className="py-20 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-
         <div className="text-center mb-16">
-
           <span className="uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
             Our Professionals
           </span>
@@ -41,17 +36,13 @@ export default function Team() {
           </h2>
 
           <p className="mt-5 text-gray-600 max-w-2xl mx-auto">
-            Behind every unforgettable journey is a passionate team dedicated
-            to delivering exceptional luxury, reliability, and personalized
+            Behind every unforgettable journey is a passionate team dedicated to
+            delivering exceptional luxury, reliability, and personalized
             customer service.
           </p>
-
         </div>
 
-        {/* Team Members */}
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {team.map((member, index) => (
             <motion.div
               key={member.name}
@@ -79,16 +70,10 @@ export default function Team() {
                 hover:shadow-2xl
               "
             >
-              {/* Top Accent */}
-
               <div className="h-2 bg-[#D4AF37]" />
 
               <div className="p-8 text-center">
-
-                {/* Image */}
-
                 <div className="relative inline-block">
-
                   <img
                     src={member.image}
                     alt={member.name}
@@ -104,36 +89,24 @@ export default function Team() {
                   />
 
                   <div className="absolute inset-0 rounded-full bg-[#D4AF37]/10 opacity-0 group-hover:opacity-100 transition" />
-
                 </div>
-
-                {/* Name */}
 
                 <h3 className="mt-6 text-2xl font-bold text-[#111111]">
                   {member.name}
                 </h3>
 
-                {/* Role */}
-
                 <p className="mt-2 text-[#D4AF37] font-semibold uppercase tracking-wide">
                   {member.role}
                 </p>
 
-                {/* Divider */}
-
                 <div className="w-16 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5" />
-
-                {/* Description */}
 
                 <p className="mt-5 text-gray-600 leading-7">
                   Dedicated to providing every client with a seamless luxury
                   rental experience from booking to delivery.
                 </p>
 
-                {/* Social Icons */}
-
                 <div className="flex justify-center gap-4 mt-8">
-
                   <button
                     className="
                       w-11
@@ -187,15 +160,11 @@ export default function Team() {
                   >
                     <FaEnvelope />
                   </button>
-
                 </div>
-
               </div>
             </motion.div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

@@ -19,13 +19,8 @@ export default function MissionVision() {
 
   return (
     <section className="py-20 bg-[#F5F5F5]">
-
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-
         <div className="text-center">
-
           <span className="uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
             Our Purpose
           </span>
@@ -35,19 +30,14 @@ export default function MissionVision() {
           </h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-gray-600">
-            Everything we do is driven by a commitment to excellence,
-            premium service, and creating remarkable driving experiences
-            for every customer.
+            Everything we do is driven by a commitment to excellence, premium
+            service, and creating remarkable driving experiences for every
+            customer.
           </p>
-
         </div>
 
-        {/* Cards */}
-
         <div className="grid lg:grid-cols-2 gap-10 mt-16">
-
           {cards.map((card, index) => (
-
             <motion.div
               key={card.title}
               initial={{ opacity: 0, y: 40 }}
@@ -76,14 +66,10 @@ export default function MissionVision() {
                 p-10
               "
             >
-
-              {/* Gold Accent */}
-
               <div className="absolute top-0 left-0 w-full h-1 bg-[#D4AF37]" />
 
-              {/* Icon */}
-
-              <div className="
+              <div
+                className="
                 w-16
                 h-16
                 rounded-2xl
@@ -97,30 +83,20 @@ export default function MissionVision() {
                 group-hover:text-[#111111]
                 transition-all
                 duration-300
-              ">
+              "
+              >
                 {card.icon}
               </div>
-
-              {/* Title */}
 
               <h3 className="mt-8 text-3xl font-bold text-[#111111]">
                 {card.title}
               </h3>
 
-              {/* Description */}
-
-              <p className="mt-6 text-gray-600 leading-8">
-                {card.description}
-              </p>
-
+              <p className="mt-6 text-gray-600 leading-8">{card.description}</p>
             </motion.div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

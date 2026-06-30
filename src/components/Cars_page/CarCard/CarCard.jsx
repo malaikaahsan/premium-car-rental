@@ -7,16 +7,20 @@ import {
   FaStar,
   FaCogs,
   FaMapMarkerAlt,
+  FaHeart,
 } from "react-icons/fa";
+import { useWishlist } from "../../../context/WishlistContext";
 
 export default function CarCard({ car }) {
+  const { isInWishlist, toggleWishlist } = useWishlist();
+  const isFavorite = isInWishlist(car.id);
+
   return (
     <motion.div
       whileHover={{ y: -10 }}
       transition={{ duration: 0.3 }}
       className="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-2xl hover:border-[#D4AF37]/40 transition-all duration-500"
     >
-      {/* Image */}
       <div className="relative h-64 overflow-hidden">
         <img
           src={car.image}
@@ -24,27 +28,38 @@ export default function CarCard({ car }) {
           className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
         />
 
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-        {/* Availability */}
         <span
           className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold shadow-md ${
-            car.available
-              ? "bg-green-600 text-white"
-              : "bg-red-600 text-white"
+            car.available ? "bg-green-600 text-white" : "bg-red-600 text-white"
           }`}
         >
           {car.available ? "Available" : "Booked"}
         </span>
 
-        {/* Rating */}
         <div className="absolute top-4 right-4 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-[#111111]">
           <FaStar className="text-[#D4AF37]" />
           {car.rating}
         </div>
 
-        {/* Price */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleWishlist(car);
+          }}
+          className={`absolute bottom-4 left-4 rounded-full p-3 shadow-lg transition ${
+            isFavorite
+              ? "bg-[#D4AF37] text-[#111111]"
+              : "bg-white/90 text-[#111111] hover:bg-[#D4AF37] hover:text-[#111111]"
+          }`}
+          aria-label={isFavorite ? "Remove from wishlist" : "Add to wishlist"}
+        >
+          <FaHeart className={isFavorite ? "fill-current" : ""} />
+        </button>
+
         <div className="absolute bottom-4 right-4 bg-[#111111]/90 backdrop-blur-md text-[#D4AF37] px-4 py-2 rounded-lg shadow-lg">
           <span className="text-2xl font-bold">
             Rs. {car.pricePerDay.toLocaleString()}
@@ -53,9 +68,7 @@ export default function CarCard({ car }) {
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-6">
-        {/* Name */}
         <h2 className="text-2xl font-bold text-[#111111] group-hover:text-[#D4AF37] transition">
           {car.name}
         </h2>
@@ -68,9 +81,7 @@ export default function CarCard({ car }) {
           </span>
         </div>
 
-        {/* Specs */}
         <div className="grid grid-cols-2 gap-4 mt-6 text-sm text-gray-600">
-
           <div className="flex items-center gap-2">
             <FaGasPump className="text-[#D4AF37]" />
             {car.fuel}
@@ -90,10 +101,8 @@ export default function CarCard({ car }) {
             <FaMapMarkerAlt className="text-[#D4AF37]" />
             {car.location}
           </div>
-
         </div>
 
-        {/* Button */}
         <Link
           to={`/cars/${car.id}`}
           className="mt-8 flex items-center justify-center gap-2 bg-[#111111] text-white py-3 rounded-xl font-semibold hover:bg-[#D4AF37] hover:text-[#111111] transition-all duration-300"

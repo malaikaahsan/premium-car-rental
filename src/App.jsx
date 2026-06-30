@@ -1,8 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
@@ -13,55 +9,32 @@ import CarDetails from "./pages/CarDetails/CarDetails";
 import Booking from "./pages/Booking/Booking";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Wishlist from "./pages/Wishlist/Wishlist";
 import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
     <BrowserRouter>
-<ScrollToTop />
+      <ScrollToTop />
       <Routes>
-
         <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
 
-          <Route
-            path="/"
-            element={<Home />}
-          />
+          <Route path="/cars" element={<Cars />} />
 
-          <Route
-            path="/cars"
-            element={<Cars />}
-          />
+          <Route path="/cars/:id" element={<CarDetails />} />
 
-          <Route
-            path="/cars/:id"
-            element={<CarDetails />}
-          />
+          <Route path="/booking" element={<Booking />} />
 
-          <Route
-            path="/booking"
-            element={<Booking />}
-          />
+          <Route path="/about" element={<About />} />
 
-          <Route
-            path="/about"
-            element={<About />}
-          />
+          <Route path="/contact" element={<Contact />} />
 
-          <Route
-            path="/contact"
-            element={<Contact />}
-          />
-
+          <Route path="/wishlist" element={<Wishlist />} />
         </Route>
 
-        <Route
-          path="*"
-          element={<NotFound />}
-        />
-
+        <Route path="*" element={<NotFound />} />
       </Routes>
-
     </BrowserRouter>
   );
 }

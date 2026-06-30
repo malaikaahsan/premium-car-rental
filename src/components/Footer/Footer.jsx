@@ -15,9 +15,10 @@ export default function Footer() {
     <footer className="bg-[#111111] text-gray-300 mt-20 border-t border-[#D4AF37]/20">
       <div className="max-w-7xl mx-auto px-6 py-14">
         <div className="grid gap-10 md:grid-cols-3">
-          {/* Company */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37]">Veloura Drive</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37]">
+              Veloura Drive
+            </h2>
 
             <p className="mt-5 leading-7 text-gray-400 text-sm md:text-lg">
               Experience luxury, elegance, and comfort with our premium fleet of
@@ -25,7 +26,6 @@ export default function Footer() {
               Veloura Drive delivers an unforgettable driving experience.
             </p>
 
-            {/* Social Icons */}
             <div className="flex gap-4 mt-6">
               <a
                 href="#"
@@ -50,9 +50,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="md:text-center">
-            <h3 className="text-xl md:text-2xl font-semibold text-white">Quick Links</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-white">
+              Quick Links
+            </h3>
 
             <ul className="mt-5 space-y-3 text-sm md:text-lg">
               <li>
@@ -87,9 +88,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-xl md:text-2xl font-semibold text-white">Contact Us</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-white">
+              Contact Us
+            </h3>
 
             <div className="space-y-5 mt-5 text-sm md:text-lg">
               <div className="flex items-center gap-3">
@@ -110,8 +112,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Bottom Footer */}
 
       <div className="border-t border-[#222222]">
         <div className="text-xs md:text-lg max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">

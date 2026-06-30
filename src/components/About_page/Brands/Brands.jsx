@@ -7,27 +7,18 @@ import Error from "../../Error/Error";
 import useCars from "../../../hooks/useCars";
 
 export default function Brands() {
-  const {
-    data: cars = [],
-    isLoading,
-    error,
-  } = useCars();
+  const { data: cars = [], isLoading, error } = useCars();
 
   if (isLoading) return <Loading />;
 
   if (error) return <Error />;
 
-  // Unique Brands
   const brands = [...new Set(cars.map((car) => car.brand))].slice(0, 4);
 
   return (
     <section className="py-20 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-
         <div className="text-center">
-
           <span className="uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
             Luxury Manufacturers
           </span>
@@ -41,15 +32,10 @@ export default function Brands() {
             automotive brands, carefully selected for luxury, performance, and
             unforgettable driving experiences.
           </p>
-
         </div>
 
-        {/* Brands */}
-
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-16">
-
           {brands.map((brand, index) => (
-
             <motion.div
               key={brand}
               initial={{ opacity: 0, y: 35 }}
@@ -78,29 +64,18 @@ export default function Brands() {
                 duration-300
               "
             >
-
-              {/* Icon */}
-
               <div className="mx-auto w-16 h-16 rounded-full bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37] transition">
-
                 <FaCrown className="text-2xl text-[#D4AF37] group-hover:text-[#111111]" />
-
               </div>
-
-              {/* Brand */}
 
               <h3 className="mt-6 text-2xl font-bold text-[#111111]">
                 {brand}
               </h3>
 
               <div className="w-12 h-1 bg-[#D4AF37] rounded-full mx-auto mt-5 group-hover:w-20 transition-all duration-300" />
-
             </motion.div>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );

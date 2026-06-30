@@ -1,1 +1,108 @@
 @import "tailwindcss";
+
+:root {
+  --page-bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-alt: #fcfcfc;
+  --surface-muted: #f5f5f5;
+  --text-primary: #111111;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --border-strong: #d1d5db;
+  --shadow: rgba(17, 17, 17, 0.12);
+}
+
+[data-theme="dark"] {
+  --page-bg: #06070a;
+  --surface: #12141b;
+  --surface-alt: #171a23;
+  --surface-muted: #1b1f2b;
+  --text-primary: #f5f5f5;
+  --text-secondary: #c4cad8;
+  --text-muted: #9aa3b2;
+  --border: #2c313d;
+  --border-strong: #3a4252;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+html {
+  background-color: var(--page-bg);
+  color: var(--text-primary);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text-primary);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--surface) !important;
+}
+
+[data-theme="dark"] .bg-\[\#F5F5F5\] {
+  background-color: var(--surface-muted) !important;
+}
+
+[data-theme="dark"] .bg-\[\#FCFCFC\] {
+  background-color: var(--surface-alt) !important;
+}
+
+[data-theme="dark"] .bg-\[\#111111\] {
+  background-color: #090b11 !important;
+}
+
+[data-theme="dark"] .bg-\[\#222222\] {
+  background-color: #151821 !important;
+}
+
+[data-theme="dark"] .text-\[\#111111\] {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-500,
+[data-theme="dark"] .text-gray-400,
+[data-theme="dark"] .text-gray-300 {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300 {
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .border-\[\#D4AF37\]\/20 {
+  border-color: rgba(212, 175, 55, 0.25) !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .shadow-xl,
+[data-theme="dark"] .shadow-lg,
+[data-theme="dark"] .shadow-2xl {
+  box-shadow: 0 16px 40px var(--shadow) !important;
+}

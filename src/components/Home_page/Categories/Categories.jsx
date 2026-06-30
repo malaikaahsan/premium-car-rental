@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import useCars from "../../../hooks/useCars";
 import { getCars } from "../../../services/carService";
-import Error from "../../Error/Error"; 
+import Error from "../../Error/Error";
 import Loading from "../../Loading/Loading";
 import {
   FaCarSide,
@@ -18,28 +18,26 @@ import {
 const iconMap = {
   "Luxury Cars": <FaGem />,
   "Sports Cars": <FaBolt />,
-  "SUVs": <FaCarSide />,
-  "Sedans": <FaCar />,
+  SUVs: <FaCarSide />,
+  Sedans: <FaCar />,
   "Economy Cars": <FaLeaf />,
   "Electric Vehicles": <FaCrown />,
   "Vans & Minibuses": <FaShuttleVan />,
   "Wedding Cars": <FaRing />,
-  "Vintage": <FaCrown />,
+  Vintage: <FaCrown />,
 };
 
 export default function Categories() {
   const { data: cars = [], isLoading, error } = useCars();
-    
-      if (isLoading) return <Loading />;
-    
-      if (error) return <Error />;
+
+  if (isLoading) return <Loading />;
+
+  if (error) return <Error />;
   const categories = [...new Set(cars.map((car) => car.category))];
 
   return (
     <section className="py-20 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,14 +52,12 @@ export default function Categories() {
           <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-4 rounded-full" />
 
           <p className="mt-5 text-gray-600 max-w-2xl mx-auto">
-            Choose from our premium collection of luxury, sports,
-            wedding and family vehicles.
+            Choose from our premium collection of luxury, sports, wedding and
+            family vehicles.
           </p>
         </motion.div>
 
-        {/* Categories */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-14">
-
           {categories.map((category, index) => (
             <motion.div
               key={category}
@@ -87,9 +83,7 @@ export default function Categories() {
               </Link>
             </motion.div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

@@ -17,8 +17,6 @@ export default function CarGallery({ car }) {
       transition={{ duration: 0.7 }}
       className="space-y-5"
     >
-      {/* Main Image */}
-
       <div className="overflow-hidden rounded-3xl shadow-2xl border border-[#D4AF37]/20 bg-white">
         <img
           src={selectedImage}
@@ -26,8 +24,6 @@ export default function CarGallery({ car }) {
           className="w-full h-[350px] md:h-[500px] object-cover transition duration-700 hover:scale-105"
         />
       </div>
-
-      {/* Gallery */}
 
       <div className="grid grid-cols-3 gap-4 ">
         {images.map((image, index) => (

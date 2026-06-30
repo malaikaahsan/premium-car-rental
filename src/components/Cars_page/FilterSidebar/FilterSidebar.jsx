@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getCars } from "../../../services/carService";
 
 export default function FilterSidebar({
-    categories,
+  categories,
   selectedCategory,
   setSelectedCategory,
 }) {
@@ -14,7 +14,6 @@ export default function FilterSidebar({
 
   return (
     <div className="relative w-full">
-      {/* Icon */}
       <FaCarSide className="absolute left-5 top-1/2 -translate-y-1/2 text-[#D4AF37] text-lg pointer-events-none" />
 
       <select
@@ -49,7 +48,6 @@ export default function FilterSidebar({
         ))}
       </select>
 
-      {/* Custom Arrow */}
       <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#D4AF37]">
         ▼
       </div>

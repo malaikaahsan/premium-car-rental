@@ -3,10 +3,8 @@ import { FaSearch } from "react-icons/fa";
 export default function SearchBar({ search, setSearch }) {
   return (
     <div className="relative w-full">
-      {/* Search Icon */}
       <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-[#D4AF37] text-lg" />
 
-      {/* Input */}
       <input
         type="text"
         placeholder="Search by car name or brand..."
@@ -34,7 +32,6 @@ export default function SearchBar({ search, setSearch }) {
         "
       />
 
-      {/* Clear Button */}
       {search && (
         <button
           onClick={() => setSearch("")}

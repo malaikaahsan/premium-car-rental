@@ -85,13 +85,9 @@ export default function CarSpecs({ car }) {
             </div>
 
             <div>
-              <p className="text-gray-500 text-sm">
-                {item.label}
-              </p>
+              <p className="text-gray-500 text-sm">{item.label}</p>
 
-              <h3 className="font-semibold text-[#111111]">
-                {item.value}
-              </h3>
+              <h3 className="font-semibold text-[#111111]">{item.value}</h3>
             </div>
           </div>
         ))}

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Hero from "../../components/Home_page/Hero/Hero";
 import SearchSection from "../../components/Home_page/SearchSection/SearchSection";
 import Categories from "../../components/Home_page/Categories/Categories";
@@ -10,6 +11,13 @@ import CTA from "../../components/Home_page/CTA/CTA";
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Veloura Drive | Premium Car Rental</title>
+        <meta
+          name="description"
+          content="Discover premium cars for rent in Pakistan with Veloura Drive."
+        />
+      </Helmet>
       <Hero />
       <SearchSection />
       <Categories />

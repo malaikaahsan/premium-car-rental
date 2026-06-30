@@ -6,7 +6,6 @@ import heroimage from "../../../assets/images/home.jpg";
 export default function Hero() {
   return (
     <section className="relative md:h-[140vh] h-screen overflow-hidden">
-      {/* Background Image */}
       <motion.div
         initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
@@ -17,10 +16,8 @@ export default function Hero() {
         }}
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/35" />
 
-      {/* Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <motion.div
@@ -29,29 +26,24 @@ export default function Hero() {
             transition={{ duration: 1 }}
             className="max-w-2xl"
           >
-            {/* Badge */}
             <div className="inline-block my-2 p-4 py-2 rounded-full border border-[#D4AF37] bg-[#111111]/50 backdrop-blur-sm">
               <span className="text-[#D4AF37] text-sm tracking-widest uppercase">
                 Premium Luxury Car Rental
               </span>
             </div>
 
-            {/* Heading */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-[#D4AF37]">
               Drive Luxury
               <br />
               Experience Excellence
             </h1>
 
-
-            {/* Paragraph */}
             <p className="mt-8 text-md sm:text-sm md:text-xl text-gray-300 leading-8 max-w-xl">
               Discover the perfect blend of luxury, comfort, and performance.
               Whether it's a wedding, business trip, or weekend getaway, Veloura
               Drive has the perfect vehicle waiting for you.
             </p>
 
-            {/* Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row gap-5">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -80,7 +72,6 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Premium Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +108,7 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      {/* Bottom Fade */}
+
       <div className="absolute bottom-0 left-0 w-full h-22 bg-linear-to-t from-[#F5F5F5] to-transparent" />
     </section>
   );

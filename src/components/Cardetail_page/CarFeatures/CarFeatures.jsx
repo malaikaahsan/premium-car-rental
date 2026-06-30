@@ -10,15 +10,9 @@ export default function CarFeatures({ features = [] }) {
       viewport={{ once: true }}
       className="mt-14"
     >
-      {/* Heading */}
-
-      <h2 className="text-3xl font-bold text-[#111111]">
-        Premium Features
-      </h2>
+      <h2 className="text-3xl font-bold text-[#111111]">Premium Features</h2>
 
       <div className="w-24 h-1 bg-[#D4AF37] rounded-full mt-3 mb-8"></div>
-
-      {/* Features */}
 
       <div className="flex flex-wrap gap-4 flex-col md:flex-row">
         {features.map((feature, index) => (
@@ -39,9 +33,7 @@ export default function CarFeatures({ features = [] }) {
           >
             <FaCheckCircle className="text-[#D4AF37] text-lg" />
 
-            <span className="font-medium text-[#111111]">
-              {feature}
-            </span>
+            <span className="font-medium text-[#111111]">{feature}</span>
           </motion.div>
         ))}
       </div>

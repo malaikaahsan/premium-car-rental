@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FaUsers,
-  FaCarSide,
-  FaAward,
-  FaHeadset,
-} from "react-icons/fa";
+import { FaUsers, FaCarSide, FaAward, FaHeadset } from "react-icons/fa";
 
 const stats = [
   {
@@ -33,11 +28,7 @@ export default function Stats() {
   return (
     <section className="py-20 bg-[#111111] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-
         <div className="text-center mb-16">
-
           <span className="uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
             Why Choose Us
           </span>
@@ -50,13 +41,9 @@ export default function Stats() {
             Our commitment to luxury, quality service, and customer satisfaction
             has made us one of the most trusted premium car rental companies.
           </p>
-
         </div>
 
-        {/* Stats */}
-
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
           {stats.map((item, index) => {
             const Icon = item.icon;
 
@@ -91,33 +78,20 @@ export default function Stats() {
                   hover:shadow-[0_15px_45px_rgba(212,175,55,0.18)]
                 "
               >
-                {/* Glow */}
-
                 <div className="absolute -top-10 -right-10 h-28 w-28 rounded-full bg-[#D4AF37]/10 blur-3xl opacity-0 transition duration-500 group-hover:opacity-100" />
 
-                {/* Icon */}
-
                 <div className="mx-auto flex h-18 w-18 items-center justify-center rounded-2xl bg-[#D4AF37]/15 border border-[#D4AF37]/30">
-
                   <Icon className="text-3xl text-[#D4AF37]" />
-
                 </div>
-
-                {/* Number */}
 
                 <h3 className="mt-6 text-5xl font-extrabold text-white">
                   {item.number}
                 </h3>
 
-                {/* Title */}
-
-                <p className="mt-3 text-gray-400 text-lg">
-                  {item.title}
-                </p>
+                <p className="mt-3 text-gray-400 text-lg">{item.title}</p>
               </motion.div>
             );
           })}
-
         </div>
       </div>
     </section>

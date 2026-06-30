@@ -12,11 +12,7 @@ import {
 export default function RelatedCars({ cars }) {
   return (
     <section className="mt-24">
-
-      {/* Heading */}
-
       <div className="text-center">
-
         <span className="uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
           You May Also Like
         </span>
@@ -28,13 +24,9 @@ export default function RelatedCars({ cars }) {
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
           Explore more premium vehicles similar to your selected car.
         </p>
-
       </div>
 
-      {/* Cards */}
-
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-
         {cars.map((car, index) => (
           <motion.div
             key={car.id}
@@ -55,11 +47,7 @@ export default function RelatedCars({ cars }) {
               transition-all
             "
           >
-
-            {/* Image */}
-
             <div className="relative h-60 overflow-hidden">
-
               <img
                 src={car.image}
                 alt={car.name}
@@ -67,47 +55,30 @@ export default function RelatedCars({ cars }) {
               />
 
               <div className="absolute top-4 left-4">
-
                 <span className="bg-[#111111] text-white px-3 py-1 rounded-full text-xs">
                   {car.category}
                 </span>
-
               </div>
-
             </div>
 
-            {/* Content */}
-
             <div className="p-6">
-
               <div className="flex justify-between">
-
                 <div>
-
                   <h3 className="text-2xl font-bold text-[#111111]">
                     {car.name}
                   </h3>
 
-                  <p className="text-gray-500">
-                    {car.brand}
-                  </p>
-
+                  <p className="text-gray-500">{car.brand}</p>
                 </div>
 
                 <div className="flex items-center gap-1 text-[#D4AF37]">
-
                   <FaStar />
 
                   {car.rating}
-
                 </div>
-
               </div>
 
-              {/* Specs */}
-
               <div className="grid grid-cols-3 gap-3 mt-6 text-sm">
-
                 <div className="flex items-center gap-2">
                   <FaGasPump className="text-[#D4AF37]" />
                   {car.fuel}
@@ -122,23 +93,15 @@ export default function RelatedCars({ cars }) {
                   <FaUsers className="text-[#D4AF37]" />
                   {car.seats}
                 </div>
-
               </div>
 
-              {/* Footer */}
-
               <div className="flex justify-between items-center mt-8">
-
                 <div>
-
                   <span className="text-3xl font-bold text-[#D4AF37]">
                     PKR {car.pricePerDay.toLocaleString()}
                   </span>
 
-                  <span className="text-gray-500 text-sm">
-                    /day
-                  </span>
-
+                  <span className="text-gray-500 text-sm">/day</span>
                 </div>
 
                 <Link
@@ -158,20 +121,13 @@ export default function RelatedCars({ cars }) {
                   "
                 >
                   Details
-
                   <FaArrowRight />
-
                 </Link>
-
               </div>
-
             </div>
-
           </motion.div>
         ))}
-
       </div>
-
     </section>
   );
 }

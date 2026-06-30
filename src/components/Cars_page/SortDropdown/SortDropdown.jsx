@@ -1,15 +1,10 @@
 import { FaSortAmountDown } from "react-icons/fa";
 
-export default function SortDropdown({
-  sortOrder,
-  setSortOrder,
-}) {
+export default function SortDropdown({ sortOrder, setSortOrder }) {
   return (
     <div className="relative w-full">
-      {/* Icon */}
       <FaSortAmountDown className="absolute left-5 top-1/2 -translate-y-1/2 text-[#D4AF37] text-lg pointer-events-none" />
 
-      {/* Select */}
       <select
         value={sortOrder}
         onChange={(e) => setSortOrder(e.target.value)}
@@ -40,7 +35,6 @@ export default function SortDropdown({
         <option value="high-low">Price: High → Low</option>
       </select>
 
-      {/* Custom Arrow */}
       <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#D4AF37]">
         ▼
       </div>

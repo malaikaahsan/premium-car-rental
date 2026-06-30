@@ -32,9 +32,7 @@ export default function BookingForm({
     const start = new Date(bookingData.pickupDate);
     const end = new Date(bookingData.returnDate);
 
-    const diff =
-      (end.getTime() - start.getTime()) /
-      (1000 * 60 * 60 * 24);
+    const diff = (end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
 
     return diff > 0 ? diff : 0;
   }, [bookingData.pickupDate, bookingData.returnDate]);
@@ -43,12 +41,16 @@ export default function BookingForm({
 
   function generateReference() {
     return `PCR-${new Date().getFullYear()}-${Math.floor(
-      1000 + Math.random() * 9000
+      1000 + Math.random() * 9000,
     )}`;
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
+
+    if (!car?.available) {
+      return;
+    }
 
     const reference = generateReference();
     const updatedBookingData = {
@@ -80,12 +82,25 @@ export default function BookingForm({
   const input =
     "w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-[#D4AF37] focus:ring-4 focus:ring-[#D4AF37]/20";
 
+  if (!car?.available) {
+    return (
+      <div className="rounded-3xl border border-red-200 bg-red-50 p-8 shadow-xl">
+        <h2 className="text-2xl font-bold text-[#111111]">
+          Booking Unavailable
+        </h2>
+        <p className="mt-3 text-gray-600 leading-7">
+          This car is already booked and cannot be reserved again.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <motion.form
       onSubmit={handleSubmit}
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: .6 }}
+      transition={{ duration: 0.6 }}
       className="bg-white rounded-3xl shadow-xl p-8 border border-gray-200"
     >
       <h2 className="text-3xl font-bold text-[#111111]">
@@ -96,15 +111,10 @@ export default function BookingForm({
         Fill in your reservation details below.
       </p>
 
-      {/* Customer */}
-
       <div className="mt-10">
-        <h3 className="font-bold text-xl mb-5">
-          Customer Information
-        </h3>
+        <h3 className="font-bold text-xl mb-5">Customer Information</h3>
 
         <div className="grid md:grid-cols-2 gap-5">
-
           <div className="relative">
             <FaUser className="absolute left-4 top-4 text-[#D4AF37]" />
 
@@ -144,19 +154,13 @@ export default function BookingForm({
               required
             />
           </div>
-
         </div>
       </div>
 
-      {/* Rental */}
-
       <div className="mt-10">
-        <h3 className="font-bold text-xl mb-5">
-          Rental Details
-        </h3>
+        <h3 className="font-bold text-xl mb-5">Rental Details</h3>
 
         <div className="grid md:grid-cols-2 gap-5">
-
           <div className="relative">
             <FaCalendarAlt className="absolute left-4 top-4 text-[#D4AF37]" />
 
@@ -208,14 +212,10 @@ export default function BookingForm({
               required
             />
           </div>
-
         </div>
       </div>
 
-      {/* Booking */}
-
       <div className="grid md:grid-cols-2 gap-5 mt-10">
-
         <div className="relative">
           <FaCarSide className="absolute left-4 top-4 text-[#D4AF37]" />
 
@@ -245,10 +245,7 @@ export default function BookingForm({
             <option>Online Transfer</option>
           </select>
         </div>
-
       </div>
-
-      {/* Notes */}
 
       <div className="relative mt-10">
         <FaStickyNote className="absolute left-4 top-4 text-[#D4AF37]" />
@@ -263,11 +260,8 @@ export default function BookingForm({
         />
       </div>
 
-      {/* Live Price */}
-
       {totalDays > 0 && (
         <div className="mt-10 rounded-2xl bg-[#111111] p-6 text-white">
-
           <div className="flex justify-between">
             <span>Total Days</span>
             <span>{totalDays}</span>
@@ -280,7 +274,6 @@ export default function BookingForm({
               PKR {totalPrice.toLocaleString()}
             </span>
           </div>
-
         </div>
       )}
 

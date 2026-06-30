@@ -37,7 +37,6 @@ export default function WhyChooseUs() {
   return (
     <section className="py-24 bg-[#111111]">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,15 +53,14 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-5 max-w-3xl mx-auto text-gray-400 leading-8">
-            At Veloura Drive, we provide more than just premium vehicles.
-            We deliver exceptional service, transparent pricing, and a
-            luxurious driving experience designed to exceed your expectations.
+            At Veloura Drive, we provide more than just premium vehicles. We
+            deliver exceptional service, transparent pricing, and a luxurious
+            driving experience designed to exceed your expectations.
           </p>
 
           <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-6 rounded-full"></div>
         </motion.div>
 
-        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {features.map((feature, index) => (
             <motion.div
@@ -79,17 +77,14 @@ export default function WhyChooseUs() {
               }}
               className="group bg-[#222222] rounded-2xl p-8 border border-[#D4AF37]/20 hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.18)]"
             >
-              {/* Icon */}
               <div className="w-16 h-16 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] text-3xl group-hover:bg-[#D4AF37] group-hover:text-[#111111] transition duration-300">
                 {feature.icon}
               </div>
 
-              {/* Title */}
               <h3 className="mt-6 text-2xl font-bold text-white">
                 {feature.title}
               </h3>
 
-              {/* Description */}
               <p className="mt-4 text-gray-400 leading-7">
                 {feature.description}
               </p>

@@ -1,6 +1,6 @@
 import useCars from "../../../hooks/useCars";
 import { getCars } from "../../../services/carService";
-import Error from "../../Error/Error"; 
+import Error from "../../Error/Error";
 import Loading from "../../Loading/Loading";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -14,12 +14,14 @@ import {
 
 export default function FeaturedCars() {
   const { data: cars = [], isLoading, error } = useCars();
-  
-    if (isLoading) return <Loading />;
-  
-    if (error) return <Error />;
-  // Show first 6 cars on Home page
-  const featuredCars = cars.filter((car) => car.featured === true).slice(0, 6);
+
+  if (isLoading) return <Loading />;
+
+  if (error) return <Error />;
+
+  const featuredCars = cars
+    .filter((car) => car.featured === true && car.available !== false)
+    .slice(0, 6);
 
   return (
     <section className="py-6 md:py-14 bg-[#F5F5F5]">
@@ -41,8 +43,6 @@ export default function FeaturedCars() {
           </p>
         </div>
 
-        {/* Cards */}
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {featuredCars.map((car, index) => (
             <motion.div
@@ -56,8 +56,6 @@ export default function FeaturedCars() {
               viewport={{ once: true }}
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
             >
-              {/* Image */}
-
               <div className="relative overflow-hidden h-64">
                 <img
                   src={car.image}
@@ -78,8 +76,6 @@ export default function FeaturedCars() {
                 )}
               </div>
 
-              {/* Content */}
-
               <div className="p-6">
                 <div className="flex justify-between items-start">
                   <div>
@@ -96,8 +92,6 @@ export default function FeaturedCars() {
                     <span className="font-semibold">{car.rating}</span>
                   </div>
                 </div>
-
-                {/* Car Specs */}
 
                 <div className="grid grid-cols-3 gap-4 mt-6 text-gray-600 text-sm">
                   <div className="flex items-center gap-2">
@@ -118,8 +112,6 @@ export default function FeaturedCars() {
                     {car.seats}
                   </div>
                 </div>
-
-                {/* Price */}
 
                 <div className="flex justify-between items-center mt-8">
                   <div>
@@ -142,8 +134,6 @@ export default function FeaturedCars() {
             </motion.div>
           ))}
         </div>
-
-        {/* View All */}
 
         <div className="text-center mt-16">
           <Link

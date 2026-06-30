@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 
 export default function MainLayout() {
   return (
-    <div className="bg-grey-500 min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[var(--page-bg)] text-[var(--text-primary)] transition-colors duration-300">
       <Navbar />
 
       <main className="grow">

@@ -20,7 +20,6 @@ export default function SelectedCarCard({ car }) {
       transition={{ duration: 0.6 }}
       className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200"
     >
-      {/* Image */}
       <div className="relative h-72 overflow-hidden group">
         <img
           src={car.image}
@@ -32,35 +31,25 @@ export default function SelectedCarCard({ car }) {
 
         <span
           className={`absolute top-5 left-5 px-4 py-2 rounded-full text-sm font-semibold ${
-            car.available
-              ? "bg-green-600 text-white"
-              : "bg-red-600 text-white"
+            car.available ? "bg-green-600 text-white" : "bg-red-600 text-white"
           }`}
         >
           {car.available ? "Available" : "Booked"}
         </span>
 
         <div className="absolute bottom-5 left-5">
-          <h2 className="text-3xl font-bold text-white">
-            {car.name}
-          </h2>
+          <h2 className="text-3xl font-bold text-white">{car.name}</h2>
 
-          <p className="text-gray-200 mt-1">
-            {car.brand}
-          </p>
+          <p className="text-gray-200 mt-1">{car.brand}</p>
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-8">
-        {/* Rating & Price */}
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2 text-[#D4AF37]">
             <FaStar />
 
-            <span className="font-semibold text-lg">
-              {car.rating}
-            </span>
+            <span className="font-semibold text-lg">{car.rating}</span>
           </div>
 
           <div>
@@ -68,13 +57,10 @@ export default function SelectedCarCard({ car }) {
               ${car.pricePerDay}
             </span>
 
-            <span className="text-gray-500">
-              /day
-            </span>
+            <span className="text-gray-500">/day</span>
           </div>
         </div>
 
-        {/* Specs */}
         <div className="grid grid-cols-2 gap-5 mt-8">
           <div className="flex items-center gap-3">
             <FaGasPump className="text-[#D4AF37]" />
@@ -107,21 +93,16 @@ export default function SelectedCarCard({ car }) {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="my-8 border-t border-gray-200" />
 
-        {/* Description */}
         <div>
           <h3 className="text-xl font-bold text-[#111111] mb-3">
             About This Car
           </h3>
 
-          <p className="text-gray-600 leading-7">
-            {car.description}
-          </p>
+          <p className="text-gray-600 leading-7">{car.description}</p>
         </div>
 
-        {/* Features */}
         <div className="mt-8">
           <h3 className="text-xl font-bold text-[#111111] mb-4">
             Included Features
@@ -143,7 +124,6 @@ export default function SelectedCarCard({ car }) {
           </div>
         </div>
 
-        {/* Availability */}
         <div
           className={`mt-8 rounded-xl p-4 flex items-center gap-3 ${
             car.available
