@@ -209,7 +209,7 @@ http://localhost:5000/cars
 
 ## 🏠 Home Page
 
-> Add screenshot here
+![Home Page](screenshots/home.png)
 
 ```
 screenshots/home.png
