@@ -5,10 +5,10 @@ import api from "../../services/api";
 import { FaCarSide } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-import CarCard from "../../components/CarCard/CarCard";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import FilterSidebar from "../../components/FilterSidebar/FilterSidebar";
-import SortDropdown from "../../components/SortDropdown/SortDropdown";
+import CarCard from "../../components/Cars_page/CarCard/CarCard";
+import SearchBar from "../../components/Cars_page/SearchBar/SearchBar";
+import FilterSidebar from "../../components/Cars_page/FilterSidebar/FilterSidebar";
+import SortDropdown from "../../components/Cars_page/SortDropdown/SortDropdown";
 import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error/Error";
 

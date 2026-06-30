@@ -1,6 +1,6 @@
 import { FaCarSide } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
-import { getCars } from "../../services/carService";
+import { getCars } from "../../../services/carService";
 
 export default function FilterSidebar({
     categories,

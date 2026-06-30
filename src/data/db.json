@@ -19,8 +19,7 @@
     "image": "/images/bmw-m4.jpg",
     "gallery": [
       "/images/bmw-m4-1.jpg",
-      "/images/bmw-m4-2.jpg",
-      "/images/bmw-m4-3.jpg"
+      "/images/bmw-m4-2.jpg"
     ],
     "features": [
       "GPS",
@@ -49,8 +48,7 @@
     "image": "/images/mercedes-sclass.webp",
     "gallery": [
       "/images/mercedes-sclass.jfif",
-      "/images/mercedes-sclass-1.jfif",
-      "/images/mercedes-sclass-3.jpg"
+      "/images/mercedes-sclass-1.jfif"
     ],
     "features": [
       "Massage Seats",
@@ -79,8 +77,7 @@
     "image": "/images/audi-r8.jpg",
     "gallery": [
       "/images/audi-r8-1.jpg",
-      "/images/audi-r8-2.jpg",
-      "/images/audi-r8-3.jpg"
+      "/images/audi-r8-2.jpg"
     ],
     "features": [
       "Virtual Cockpit",
@@ -109,8 +106,7 @@
     "image": "/images/rolls-ghost.jpg",
     "gallery": [
       "/images/rolls-ghost-1.jpg",
-      "/images/rolls-ghost-2.jpg",
-      "/images/rolls-ghost-3.jpg"
+      "/images/rolls-ghost-2.jpg"
     ],
     "features": [
       "Champagne Cooler",
@@ -139,8 +135,7 @@
     "image": "/images/land-cruiser.jpg",
     "gallery": [
       "/images/land-cruiser-1.jpg",
-      "/images/land-cruiser-2.jpg",
-      "/images/land-cruiser-3.jpg"
+      "/images/land-cruiser-2.jpg"
     ],
     "features": [
       "4WD",
@@ -169,8 +164,7 @@
     "image": "/images/tesla-model-s.jpg",
     "gallery": [
       "/images/tesla-model-s-1.jpg",
-      "/images/tesla-model-s-2.jpg",
-      "/images/tesla-model-s-3.jpg"
+      "/images/tesla-model-s-2.jpg"
     ],
     "features": [
       "Autopilot",
@@ -200,8 +194,7 @@
     "image": "/images/bentley-continental-1.jpg",
     "gallery": [
       "/images/bentley-continental.jfif",
-      "/images/bentley-continental-2.jpg",
-      "/images/bentley-continental-3.jfif"
+      "/images/bentley-continental-2.jpg"
     ],
     "features": [
       "Leather Seats",
@@ -230,8 +223,7 @@
     "image": "/images/porsche-911.jfif",
     "gallery": [
       "/images/porsche-911-1.jfif",
-      "/images/porsche-911-2.jfif",
-      "/images/porsche-911-3.jpg"
+      "/images/porsche-911-2.jfif"
     ],
     "features": [
       "Sport Mode",
@@ -260,8 +252,7 @@
     "image": "/images/honda-civic.png",
     "gallery": [
       "/images/honda-civic-1.jfif",
-      "/images/honda-civic-2.jfif",
-      "/images/honda-civic-3.jpg"
+      "/images/honda-civic-2.jfif"
     ],
     "features": [
       "Cruise Control",
@@ -290,8 +281,7 @@
     "image": "/images/suzuki-alto.jfif",
     "gallery": [
       "/images/suzuki-alto-1.jfif",
-      "/images/suzuki-alto-2.jfif",
-      "/images/suzuki-alto-3.jpg"
+      "/images/suzuki-alto-2.jfif"
     ],
     "features": [
       "Air Conditioning",
@@ -320,8 +310,7 @@
     "image": "/images/sprinter.jfif",
     "gallery": [
       "/images/sprinter-1.jfif",
-      "/images/sprinter-2.jfif",
-      "/images/sprinter-3.jpg"
+      "/images/sprinter-2.jfif"
     ],
     "features": [
       "Dual AC",
@@ -350,8 +339,7 @@
     "image": "/images/bmw-i7.jfif",
     "gallery": [
       "/images/bmw-i7-1.jfif",
-      "/images/bmw-i7-2.jfif",
-      "/images/bmw-i7-3.jpg"
+      "/images/bmw-i7-2.jfif"
     ],
     "features": [
       "Panoramic Roof",
@@ -380,8 +368,7 @@
   "image": "/images/bentley-flying-spur.jfif",
   "gallery": [
     "/images/bentley-flying-spur-1.jfif",
-    "/images/bentley-flying-spur-2.avif",
-    "/images/bentley-flying-spur-3.jpg"
+    "/images/bentley-flying-spur-2.avif"
   ],
   "features": [
     "GPS",
@@ -410,8 +397,7 @@
   "image": "/images/maybach-s680.jfif",
   "gallery": [
     "/images/maybach-s680-1.jfif",
-    "/images/maybach-s680-2.jfif",
-    "/images/maybach-s680-3.jfif"
+    "/images/maybach-s680-2.jfif"
   ],
   "features": [
     "Panoramic Roof",
@@ -440,8 +426,7 @@
   "image": "/images/rolls-cullinan.jfif",
   "gallery": [
     "/images/rolls-cullinan-1.jfif",
-    "/images/rolls-cullinan-2.jfif",
-    "/images/rolls-cullinan-3.jpg"
+    "/images/rolls-cullinan-2.jfif"
   ],
   "features": [
     "GPS",
@@ -470,8 +455,7 @@
   "image": "/images/bmw-760li.jfif",
   "gallery": [
     "/images/bmw-760li-1.jfif",
-    "/images/bmw-760li-2.jfif",
-    "/images/bmw-760li-3.jpg"
+    "/images/bmw-760li-2.jfif"
   ],
   "features": [
     "Wireless Charging",
@@ -500,8 +484,7 @@
   "image": "/images/audi-a8l.webp",
   "gallery": [
     "/images/audi-a8l.jfif",
-    "/images/audi-a8l-2.jfif",
-    "/images/audi-a8l-3.jpg"
+    "/images/audi-a8l-2.jfif"
   ],
   "features": [
     "GPS",
@@ -530,8 +513,7 @@
   "image": "/images/maserati-quattroporte.jfif",
   "gallery": [
     "/images/maserati-quattroporte-1.jfif",
-    "/images/maserati-quattroporte-2.jfif",
-    "/images/maserati-quattroporte-3.jpg"
+    "/images/maserati-quattroporte-2.jfif"
   ],
   "features": [
     "Premium Audio",
@@ -542,5 +524,41 @@
   ]
 }
 
-]
+],
+
+  "bookings": [
+    {
+  "id": 1,
+
+  "reference": "PCR-2026-0001",
+
+  "carId": 5,
+
+  "customerName": "Ali Khan",
+  "email": "ali@example.com",
+  "phone": "03001234567",
+
+  "pickupDate": "2026-07-20",
+  "returnDate": "2026-07-25",
+
+  "pickupLocation": "Islamabad",
+  "returnLocation": "Islamabad",
+
+  "specialRequests": "Child seat required",
+
+  "driverRequired": false,
+
+  "paymentMethod": "Cash",
+
+  "bookingType": "Self Drive",
+
+  "pricePerDay": 14500,
+  "totalDays": 5,
+  "totalPrice": 72500,
+
+  "bookingDate": "2026-07-15T14:30:25Z",
+
+  "status": "Confirmed"
+}
+  ]
 }
