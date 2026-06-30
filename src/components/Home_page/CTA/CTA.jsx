@@ -4,7 +4,7 @@ import { FaArrowRight, FaCarSide } from "react-icons/fa";
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-[#111111] pt-24">
+    <section className="relative overflow-hidden bg-[#111111] md:p-24">
       {/* Background Glow */}
       <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#D4AF37]/10 blur-3xl"></div>
 

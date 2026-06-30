@@ -30,7 +30,7 @@ export default function Hero() {
             className="max-w-2xl"
           >
             {/* Badge */}
-            <div className="inline-block mb-2 px-4 py-2 rounded-full border border-[#D4AF37] bg-[#111111]/50 backdrop-blur-sm">
+            <div className="inline-block my-2 p-4 py-2 rounded-full border border-[#D4AF37] bg-[#111111]/50 backdrop-blur-sm">
               <span className="text-[#D4AF37] text-sm tracking-widest uppercase">
                 Premium Luxury Car Rental
               </span>
