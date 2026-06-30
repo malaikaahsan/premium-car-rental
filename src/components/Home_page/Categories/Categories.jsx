@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import cars from "../../../data/cars.json";
+import useCars from "../../../hooks/useCars";
+import { getCars } from "../../../services/carService";
+import Error from "../../Error/Error"; 
+import Loading from "../../Loading/Loading";
 import {
   FaCarSide,
   FaGem,
@@ -25,6 +28,11 @@ const iconMap = {
 };
 
 export default function Categories() {
+  const { data: cars = [], isLoading, error } = useCars();
+    
+      if (isLoading) return <Loading />;
+    
+      if (error) return <Error />;
   const categories = [...new Set(cars.map((car) => car.category))];
 
   return (

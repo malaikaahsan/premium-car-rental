@@ -1,9 +1,17 @@
-import cars from "../../../data/cars.json";
+import useCars from "../../../hooks/useCars";
+import { getCars } from "../../../services/carService";
+import Error from "../../Error/Error"; 
+import Loading from "../../Loading/Loading";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaHeart, FaStar } from "react-icons/fa";
 
 export default function WeddingCollection() {
+  const { data: cars = [], isLoading, error } = useCars();
+   
+     if (isLoading) return <Loading />;
+   
+     if (error) return <Error />;
   const weddingCars = cars
     .filter((car) => car.category === "Wedding Cars")
     .slice(0, 4);
@@ -89,7 +97,7 @@ export default function WeddingCollection() {
                   <div>
 
                     <span className="text-2xl font-bold text-[#D4AF37]">
-                      ${car.pricePerDay}
+                      {car.pricePerDay} PKR
                     </span>
 
                     <span className="text-gray-500">
