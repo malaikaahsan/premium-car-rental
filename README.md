@@ -30,7 +30,6 @@ A modern, responsive premium car rental web application where users can browse l
 - Filter by category
 - Sort by price
 - Responsive car cards
-- Skeleton loading animations
 
 ---
 
@@ -120,7 +119,6 @@ src
 │   ├── Home_page
 │   ├── Navbar
 │   ├── Footer
-│   ├── Skeletons
 │   └── UI Components
 │
 ├── hooks
